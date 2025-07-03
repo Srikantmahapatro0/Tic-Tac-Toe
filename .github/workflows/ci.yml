@@ -1,0 +1,30 @@
+name: Java CI (No Maven)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile Java files
+        run: |
+          mkdir classes
+          javac -d classes $(find . -name "*.java")
+
+      - name: Run Main (if exists)
+        run: |
+          java -cp classes controller.Main || echo "No Main found. Skipping run."
