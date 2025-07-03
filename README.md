@@ -1,3 +1,4 @@
+![CI](https://github.com/Srikantmahapatro0/Tic-Tac-Toe/actions/workflows/ci.yml/badge.svg)
 
 # Tic Tac Toe - OOP Based Console Game
 
