@@ -31,7 +31,7 @@ public class App {
                 new ColWinningStrategy(),
                 new DiagWinningStrategy()
         );
-
+//test//
         Game game = gameController.startGame(
                 players, dimension, winningStrategies
         );
