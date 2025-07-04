@@ -98,3 +98,9 @@ Tracks left and right diagonals separately and verifies the count against board 
 This project is built for educational purposes and is open for extension and customization.
 
 ---
+# Build the Docker image
+docker build -t tictactoe .
+
+# Run the Java app inside a container
+docker run tictactoe
+
